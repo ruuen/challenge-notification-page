@@ -4,6 +4,8 @@ import imageAngela from "../../media/images/avatar-angela-gray.webp";
 import imageJacob from "../../media/images/avatar-jacob-thompson.webp";
 import imageRizky from "../../media/images/avatar-rizky-hasanuddin.webp";
 import imageKimberly from "../../media/images/avatar-kimberly-smith.webp";
+import imageNathan from "../../media/images/avatar-nathan-peterson.webp";
+import imageAnna from "../../media/images/avatar-anna-kim.webp";
 import imageChess from "../../media/images/image-chess.webp";
 
 export const initialState = [
@@ -85,6 +87,40 @@ export const initialState = [
       // title:
       url: "#",
       photo: imageChess,
+      // privateMessage:
+    },
+  },
+  {
+    id: 6,
+    isUnread: false,
+    timestamp: new Date().toJSON(),
+    type: "react",
+    sourceUser: {
+      name: "Nathan Peterson",
+      photo: imageNathan,
+    },
+    data: {
+      content: "post",
+      title: "5 end-game strategies to increase your win rate",
+      url: "#",
+      // photo:
+      // privateMessage:
+    },
+  },
+  {
+    id: 7,
+    isUnread: false,
+    timestamp: new Date().toJSON(),
+    type: "leaveGroup",
+    sourceUser: {
+      name: "Anna Kim",
+      photo: imageAnna,
+    },
+    data: {
+      content: "group",
+      title: "Chess Club",
+      url: "#",
+      // photo:
       // privateMessage:
     },
   },

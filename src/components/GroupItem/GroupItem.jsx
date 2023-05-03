@@ -14,8 +14,7 @@ export default function GroupItem({ notification }) {
             {notification.sourceUser.name}
           </span>
           <span className="notifications__action">
-            has {isJoinGroup ? "joined" : "left"} your{" "}
-            {notification.data.content}
+            {isJoinGroup ? `has joined your group` : `left the group`}
           </span>
           <a href={notification.data.url} className="notifications__target">
             {notification.data.title}

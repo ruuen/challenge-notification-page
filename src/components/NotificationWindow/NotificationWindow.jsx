@@ -23,7 +23,7 @@ export default function NotificationWindow() {
       case "comment":
         return <CommentItem key={item.id} notification={item} />;
       default:
-        return <li></li>;
+        return <></>;
     }
   });
 
@@ -32,7 +32,7 @@ export default function NotificationWindow() {
       <header className="notifications__header">
         <div>
           <h1 className="notifications__header-title">Notifications</h1>
-          <span></span>
+          <span className="notifications__unread-count">3</span>
         </div>
         <a href="#">Mark all as read</a>
       </header>
