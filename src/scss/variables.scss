@@ -1,0 +1,40 @@
+// Font Imports
+/* plus-jakarta-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../media/fonts/plus-jakarta-sans-v7-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */ url("../media/fonts/plus-jakarta-sans-v7-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* plus-jakarta-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../media/fonts/plus-jakarta-sans-v7-latin-800.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */ url("../media/fonts/plus-jakarta-sans-v7-latin-800.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+// Colours
+$clr-white: #f7fafd;
+$clr-white-lighter: #ffffff;
+$clr-greyblue-100: #dde7ee;
+$clr-greyblue-200: #e5effa;
+$clr-greyblue-300: #939cad;
+$clr-greyblue-400: #5e6778;
+$clr-greyblue-500: #1c202b;
+$clr-blackblue: #1c202b;
+$clr-blue: #0a327b;
+$clr-red: #f65552;
+
+// Fonts
+$font-family-main: "Plus Jakarta Sans", sans-serif;
+$font-weight-normal: 500;
+$font-weight-bold: 800;
+
+// Breakpoints
+$breakpoint-tablet: 700px;
+$breakpoint-desktop: 1200px;
