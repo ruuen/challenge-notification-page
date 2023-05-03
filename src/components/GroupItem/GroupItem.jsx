@@ -1,4 +1,6 @@
-export default function ReactionItem({ notification }) {
+export default function GroupItem({ notification }) {
+  const isJoinGroup = notification.type === "joinGroup" ? true : false;
+
   return (
     <li className="notifications__item">
       <img
@@ -12,7 +14,8 @@ export default function ReactionItem({ notification }) {
             {notification.sourceUser.name}
           </span>
           <span className="notifications__action">
-            has reacted to your {notification.data.content}
+            has {isJoinGroup ? "joined" : "left"} your{" "}
+            {notification.data.content}
           </span>
           <a href={notification.data.url} className="notifications__target">
             {notification.data.title}
@@ -25,7 +28,7 @@ export default function ReactionItem({ notification }) {
           {notification.timestamp}
         </span>
         {/* <div className="notifications__private-message">
-      </div> */}
+          </div> */}
       </div>
     </li>
   );

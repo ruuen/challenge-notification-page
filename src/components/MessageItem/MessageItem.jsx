@@ -1,4 +1,4 @@
-export default function ReactionItem({ notification }) {
+export default function MessageItem({ notification }) {
   return (
     <li className="notifications__item">
       <img
@@ -12,11 +12,8 @@ export default function ReactionItem({ notification }) {
             {notification.sourceUser.name}
           </span>
           <span className="notifications__action">
-            has reacted to your {notification.data.content}
+            sent you a private message
           </span>
-          <a href={notification.data.url} className="notifications__target">
-            {notification.data.title}
-          </a>
           {notification.isUnread && (
             <span className="notifications__icon">Unread</span>
           )}
@@ -24,8 +21,11 @@ export default function ReactionItem({ notification }) {
         <span className="notifications__timestamp">
           {notification.timestamp}
         </span>
-        {/* <div className="notifications__private-message">
-      </div> */}
+        <div className="notifications__pm-box">
+          <span className="notifications__pm-text">
+            {notification.data.privateMessage}
+          </span>
+        </div>
       </div>
     </li>
   );
