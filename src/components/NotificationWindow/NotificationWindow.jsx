@@ -27,14 +27,32 @@ export default function NotificationWindow() {
     }
   });
 
+  function getUnreadCount() {
+    const unreadNotifications = notifications.filter((item) => item.isUnread === true);
+    return unreadNotifications.length;
+  }
+
+  function handleMarkAsRead() {
+    setNotifications((prevState) => {
+      return prevState.map((item) => {
+        return {
+          ...item,
+          isUnread: false,
+        };
+      });
+    });
+  }
+
   return (
     <section className="notifications">
       <header className="notifications__header">
         <div>
           <h1 className="notifications__header-title">Notifications</h1>
-          <span className="notifications__unread-count">3</span>
+          <span className="notifications__unread-count">{getUnreadCount()}</span>
         </div>
-        <a href="#">Mark all as read</a>
+        <button href="#" onClick={handleMarkAsRead}>
+          Mark all as read
+        </button>
       </header>
       <ul className="notifications__list">{notificationElements}</ul>
     </section>
