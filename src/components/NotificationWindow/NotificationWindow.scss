@@ -1,0 +1,61 @@
+@use "../../scss/variables.scss" as var;
+
+.notifications {
+  padding: 1.5em 1em;
+}
+
+.notifications__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1.5em 0;
+
+  &-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-title {
+    font-weight: var.$font-weight-bold;
+    color: var.$clr-blackblue;
+    font-size: 1.25rem;
+    line-height: 28px;
+  }
+
+  &-btn {
+    font-family: var.$font-family-main;
+    font-weight: var.$font-weight-normal;
+    color: var.$clr-greyblue-400;
+    background: 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.875rem;
+
+    &:hover {
+      color: var.$clr-blue;
+    }
+  }
+}
+
+.notifications__unread-count {
+  $curved-border: 6px;
+
+  background: var.$clr-blue;
+  color: var.$clr-white-lighter;
+  padding: 0.1em 0.2em 0.2em 0.2em;
+  min-width: 2.75ch;
+  text-align: center;
+  margin: 0 0 0 0.7em;
+  border-radius: $curved-border;
+  font-size: 1rem;
+  font-weight: var.$font-weight-bold;
+}
+
+.notifications__list {
+  padding-inline: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}

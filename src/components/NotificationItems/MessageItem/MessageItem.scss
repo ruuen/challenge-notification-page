@@ -1,0 +1,16 @@
+@use "../../../scss/variables.scss" as var;
+
+.notifications__pm-box {
+  $curved-border: 5px;
+  padding: 1em;
+  margin: 1em 0 0 0;
+  text-decoration: none;
+  border: 1px solid var.$clr-greyblue-100;
+  border-radius: $curved-border;
+  background: var.$clr-white-lighter;
+  color: var.$clr-greyblue-400;
+
+  &:hover {
+    background: var.$clr-greyblue-200;
+  }
+}
