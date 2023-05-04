@@ -1,0 +1,13 @@
+@use "../../../scss/variables.scss" as var;
+
+.notifications__joinGroup,
+.notifications__leaveGroup {
+  .notifications__target {
+    color: var.$clr-blue;
+    text-decoration: none;
+
+    &:visited {
+      color: var.$clr-blue;
+    }
+  }
+}

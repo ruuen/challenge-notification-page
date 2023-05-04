@@ -1,0 +1,18 @@
+@use "../../../scss/variables.scss" as var;
+
+.notifications__comment {
+  grid-template-columns: 0.175fr 0.7fr 0.125fr;
+
+  .notifications__body-group {
+    padding: 0 1em 0 0;
+  }
+}
+
+.notifications__item-target-image {
+  max-width: 100%;
+  margin-left: auto;
+
+  > img {
+    width: 100%;
+  }
+}

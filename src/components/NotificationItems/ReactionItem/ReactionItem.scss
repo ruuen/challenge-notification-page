@@ -1,0 +1,11 @@
+@use "../../../scss/variables.scss" as var;
+
+.notifications__react {
+  .notifications__target {
+    text-decoration: none;
+
+    &:hover {
+      color: var.$clr-blue;
+    }
+  }
+}

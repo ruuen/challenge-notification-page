@@ -1,3 +1,5 @@
+import { DateTime } from "luxon";
+
 // temp imports until http urls can be specified
 import imageMark from "../../media/images/avatar-mark-webber.webp";
 import imageAngela from "../../media/images/avatar-angela-gray.webp";
@@ -8,11 +10,17 @@ import imageNathan from "../../media/images/avatar-nathan-peterson.webp";
 import imageAnna from "../../media/images/avatar-anna-kim.webp";
 import imageChess from "../../media/images/image-chess.webp";
 
+function generatePastDate(timeInPast) {
+  return DateTime.now()
+    .minus({ ...timeInPast })
+    .toISO();
+}
+
 export const initialState = [
   {
     id: 1,
     isUnread: true,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ minutes: 1 }),
     type: "react",
     sourceUser: {
       name: "Mark Webber",
@@ -21,7 +29,7 @@ export const initialState = [
     data: {
       content: "post",
       title: "My first tournament today!",
-      url: "#",
+      // url:
       // title
       // photo
       // privateMessage
@@ -30,7 +38,7 @@ export const initialState = [
   {
     id: 2,
     isUnread: true,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ minutes: 5 }),
     type: "follow",
     sourceUser: {
       name: "Angela Gray",
@@ -41,7 +49,7 @@ export const initialState = [
   {
     id: 3,
     isUnread: true,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ days: 1 }),
     type: "joinGroup",
     sourceUser: {
       name: "Jacob Thompson",
@@ -58,7 +66,7 @@ export const initialState = [
   {
     id: 4,
     isUnread: false,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ days: 5 }),
     type: "message",
     sourceUser: {
       name: "Rizky Hasanuddin",
@@ -76,7 +84,7 @@ export const initialState = [
   {
     id: 5,
     isUnread: false,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ weeks: 1 }),
     type: "comment",
     sourceUser: {
       name: "Kimberly Smith",
@@ -93,7 +101,7 @@ export const initialState = [
   {
     id: 6,
     isUnread: false,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ weeks: 2 }),
     type: "react",
     sourceUser: {
       name: "Nathan Peterson",
@@ -110,7 +118,7 @@ export const initialState = [
   {
     id: 7,
     isUnread: false,
-    timestamp: new Date().toJSON(),
+    timestamp: generatePastDate({ weeks: 2 }),
     type: "leaveGroup",
     sourceUser: {
       name: "Anna Kim",

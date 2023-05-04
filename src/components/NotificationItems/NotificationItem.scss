@@ -1,0 +1,63 @@
+@use "../../scss/variables.scss" as var;
+
+.notifications__item {
+  $curved-border: 8px;
+
+  display: grid;
+  grid-template-columns: 0.175fr 0.825fr;
+  font-size: 0.875rem;
+  padding: 1em;
+  border-radius: $curved-border;
+
+  &--unread {
+    background: var.$clr-white;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0.25em 0;
+
+    > *:nth-child(2) {
+      margin: 0.25em 0 0 0;
+    }
+  }
+
+  &-image {
+    max-width: 70%;
+  }
+}
+
+.notifications__user {
+  font-weight: var.$font-weight-bold;
+  color: var.$clr-greyblue-500;
+  text-decoration: none;
+
+  &:hover {
+    color: var.$clr-blue;
+  }
+}
+
+.notifications__action {
+  padding: 0 0 0 0.5ch;
+  color: var.$clr-greyblue-400;
+}
+
+.notifications__target {
+  padding: 0 0 0 0.5ch;
+  color: var.$clr-greyblue-400;
+  font-weight: var.$font-weight-semibold;
+}
+
+.notifications__icon {
+  display: inline;
+  padding: 0 0 0 0.45em;
+
+  > img {
+    margin: 0 0 0.075em 0;
+  }
+}
+
+.notifications__timestamp {
+  color: var.$clr-greyblue-300;
+}
