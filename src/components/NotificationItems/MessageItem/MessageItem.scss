@@ -14,3 +14,9 @@
     background: var.$clr-greyblue-200;
   }
 }
+
+@media (min-width: var.$breakpoint-desktop) {
+  .notifications__pm-box {
+    font-size: 1rem;
+  }
+}

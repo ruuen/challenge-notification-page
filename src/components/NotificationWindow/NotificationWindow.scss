@@ -1,7 +1,12 @@
 @use "../../scss/variables.scss" as var;
 
 .notifications {
-  padding: 1.5em 1em;
+  padding: 1.5em 1em 0 1em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 100vh;
+  max-height: -webkit-fill-available;
 }
 
 .notifications__header {
@@ -38,6 +43,10 @@
   }
 }
 
+.notifications__list {
+  overflow: auto;
+}
+
 .notifications__unread-count {
   $curved-border: 6px;
 
@@ -58,4 +67,34 @@
   display: flex;
   flex-direction: column;
   gap: 0.75em;
+}
+
+@media (min-width: var.$breakpoint-desktop) {
+  .notifications {
+    $curved-border: 15px;
+
+    padding: 2.25em 2.25em 0 2.25em;
+    box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+    background-color: var.$clr-white-lighter;
+    margin: 0 0 2.25em 0;
+    max-width: 46rem;
+    max-height: 52.5rem;
+    border-radius: $curved-border;
+  }
+
+  .notifications__list {
+    padding: 0 0 0.75em 0;
+  }
+
+  .notifications__header {
+    margin: 0 0 1.75em 0;
+
+    &-title {
+      font-size: 1.5rem;
+    }
+
+    &-btn {
+      font-size: 1rem;
+    }
+  }
 }
