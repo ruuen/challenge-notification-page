@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/notifications-page-with-react-and-scss-vFi2BJu_-c)
 - Live Site URL: [Netlify](https://rd-challenge-notification-page.netlify.app/)
 
 ## My process
