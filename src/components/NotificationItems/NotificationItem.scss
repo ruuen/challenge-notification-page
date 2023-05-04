@@ -61,3 +61,28 @@
 .notifications__timestamp {
   color: var.$clr-greyblue-300;
 }
+
+@media (min-width: var.$breakpoint-tablet) {
+  .notifications__item {
+    grid-template-columns: 0.1fr 0.9fr;
+
+    &-image {
+      max-width: 75%;
+    }
+  }
+}
+
+@media (min-width: var.$breakpoint-desktop) {
+  .notifications__item {
+    &-image {
+      max-width: 70%;
+    }
+  }
+
+  .notifications__user,
+  .notifications__action,
+  .notifications__target,
+  .notifications__timestamp {
+    font-size: 1rem;
+  }
+}

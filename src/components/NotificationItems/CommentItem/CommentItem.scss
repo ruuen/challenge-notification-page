@@ -16,3 +16,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: var.$breakpoint-tablet) {
+  .notifications__comment {
+    grid-template-columns: 0.1fr 0.825fr 0.075fr;
+  }
+}
