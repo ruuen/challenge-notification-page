@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/notifications-page-with-react-and-scss-vFi2BJu_-c)
-- Live Site URL: [Netlify](https://rd-challenge-notification-page.netlify.app/)
+- Live Site URL: [Cloudflare Pages](https://mbr-challenge-notification-page.pages.dev/)
 
 ## My process
 
@@ -58,5 +58,5 @@ This could have probably been improved with the build of a generic notification 
 
 ## Author
 
-- Frontend Mentor - [@ruuendigital](https://www.frontendmentor.io/profile/ruuendigital)
+- Frontend Mentor - [@ruuen](https://www.frontendmentor.io/profile/ruuen)
 - Twitter - [@maxruuen](https://www.twitter.com/maxruuen)
